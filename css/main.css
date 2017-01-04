@@ -1,0 +1,295 @@
+/*
+body{margin:0px;padding:0px;}
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Microsoft YaHei" ! important;
+    font-size: 12px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%
+}
+
+
+/*
+* 整体布局开始
+*/
+
+.layout {
+    border: 0px solid red;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/background/0.jpg);
+    position: relative;
+    filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+
+/*
+* 最底部的开始菜单容器 开始
+*/
+
+.start-menu {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 60px;
+    /*background-color: green;*/
+}
+
+.start-menu .content {
+    margin: 0px auto;
+    width: 80%;
+    height: 100%;
+    filter: alpha(opacity=30);
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.start-menu .content ul {
+    list-style: none;
+    margin: 0px 10px;
+}
+
+.start-menu .content ul li a img {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+
+
+/*
+* 最底部的开始菜单容器 结束
+*/
+
+
+/*
+* 顶部的菜单容器 开始
+*/
+
+.top-menu {
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    /**/
+    background-image: url(../images/top-menu-bg.jpg);
+    background-repeat: repeat-x;
+    color: rgb(255, 255, 255);
+}
+
+.top-menu .left {
+    float: left;
+}
+
+.top-menu .left a img {
+    width: 29px;
+    height: 29px;
+    margin: 3px;
+}
+
+.top-menu .right {
+    text-align: center;
+    float: right;
+    height: 100%;
+    line-height: 32px;
+    font-size: 12px;
+    font-weight: bold;
+    border-left: 1px solid gray;
+    max-width: 160px;
+    overflow: hidden;
+}
+
+.top-menu .right a {
+    display: inline-block;
+    height: 35px;
+    margin: 0px 10px 0px 10px;
+}
+
+
+/*
+* 顶部的菜单容器 结束
+*/
+
+
+/*
+* 中间桌面 开始
+*/
+
+.middle-content {
+    position: absolute;
+    top: 35px;
+    bottom: 60px;
+    left: 0px;
+    right: 0px;
+    /*background:skyblue;*/
+}
+
+.middle-content .program {
+    float: left;
+    width: 100px;
+    height: 100px;
+    /*border: 1px solid red;*/
+    overflow: hidden;
+    text-align: center
+}
+
+.middle-content .program a {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center
+}
+
+.middle-content .program a:hover {
+    text-underline: none;
+    cursor: pointer;
+    text-decoration: none;
+    filter: alpha(opacity=30);
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+a:hover img {
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    transform: scale(1.06);
+}
+
+.middle-content .program a img {
+    width: 60px;
+    height: 60px;
+    margin: 12px 10px 6px 10px;
+    transition: all .3s ease-out
+}
+
+.middle-content .program a p {
+    height: 14px;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+
+.middle-content .program a:hover p {
+    height: 14px;
+    overflow: hidden;
+    margin: 0px 4px;
+    text-align: center;
+    color: #f5513b;
+}
+
+
+/*
+* 中间桌面 结束
+*/
+
+/*
+* 弹出层样式
+*/
+.dialog {
+    border: 1px solid gray;
+    width: 100%;
+    height: 100%; 
+    position: fixed;
+    top: 0px;
+    left: 0px; 
+    bottom:0px;
+    right:0px;
+    z-index: 101;
+    display: none;
+}
+
+.dialog .content{
+    border: 1px solid gray;
+    position: relative;
+    left:200px;
+    top:100px;
+    width: 500px;
+    height: 400px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);  
+    box-shadow: 0 6px 12px rgba(0,0,0,.175); 
+}
+ 
+.dialog .title {
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/top-menu-bg.jpg);
+}
+.dialog .title span {
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+    max-width: 200px;
+}
+.dialog .title a {
+    cursor: pointer;
+}
+.dialog .title a:hover{
+    background-image: url(../images/close.png);
+}
+
+.dialog .main { 
+    width: 100%;
+    height: 100%;  
+    /*background-color:white;*/
+}
+
+ .cover {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    filter: alpha(opacity=70);
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 100;
+    display: none;
+}
+
+ .close {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-image: url(../images/closeb.png);
+    background-repeat: no-repeat;
+    background-position: 2px;
+}
+
+.right-hidden{
+    position: fixed;
+    top:300px;
+    right: 0px;
+    width: 20px;
+    height:30px;
+    background-color: red;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    border-radius: 5px 0px 0px 5px;
+}
+
+/*
+* 公共样式
+*/
+
+.float-right{
+    float: right;
+}
+
+.float-left{
+    float: left;
+}
